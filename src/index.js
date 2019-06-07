@@ -1,8 +1,13 @@
 import 'Styles/main.scss';
 import Vue from 'vue';
-import HelloWorld from 'Components/HelloWorld.vue';
+import BootstrapVue from 'bootstrap-vue';
+import App from './App.vue';
 
-new Vue({
-  render: createElement => createElement(HelloWorld),
-  el: '#app'
+Vue.use(BootstrapVue);
+
+const app = new Vue({
+  render: createElement => createElement(App),
+  el: '#app',
 });
+
+app();

@@ -7,6 +7,9 @@
     "node": "8.4.0",
     "npm": "5.4.1"
   },
+  "repository": {
+    "git": "https://github.com/joaotdn/frontend-assignment.git"
+  },
   "scripts": {
     "clean:build": "./node_modules/.bin/rimraf build",
     "predev": "npm run clean:build",
@@ -15,8 +18,8 @@
     "test": "node_modules/.bin/jest",
     "start": "npm run dev"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["frontend", "profile", "vue"],
+  "author": "João Teodoro <joaotdn@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.3.1",
@@ -42,14 +45,16 @@
     "cssnano": "^4.1.7",
     "dotenv": "^6.1.0",
     "eslint": "^5.9.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-loader": "^2.1.1",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-jest": "^22.1.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^5.0.0-beta.5",
     "faker": "^4.1.0",
     "file-loader": "^2.0.0",

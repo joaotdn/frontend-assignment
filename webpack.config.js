@@ -31,7 +31,8 @@ module.exports = {
       Styles: path.resolve(__dirname, 'src', 'styles'),
       Plugins: path.resolve(__dirname, 'src', 'plugins'),
       Mixins: path.resolve(__dirname, 'src', 'mixins')
-    }
+    },
+    extensions: ['*', '.js', '.vue', '.json']
   },
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {

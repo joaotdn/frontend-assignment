@@ -58,7 +58,7 @@ export default {
   computed: {
     ...mapGetters(['breadcrumbItems']),
     breadcrumb () {
-      return this.$store.dispatch(UPDATE_BREADCRUMB, { text: this.$route.meta.text, active: true });
+      return this.$store.dispatch(UPDATE_BREADCRUMB, this.$route.meta);
     }
   },
 

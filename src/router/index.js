@@ -18,17 +18,29 @@ export default new Router({
         {
           name: 'company-data',
           path: '',
-          component: CompanyData
+          component: CompanyData,
+          meta: {
+            text: 'Company Data',
+            active: true
+          }
         },
         {
           name: 'company-table',
           path: 'table',
-          component: CompanyTable
+          component: CompanyTable,
+          meta: {
+            text: 'Company Table',
+            active: true
+          }
         },
         {
           name: 'company-page',
           path: 'page',
-          component: CompanyPage
+          component: CompanyPage,
+          meta: {
+            text: 'Company Page',
+            active: true
+          }
         }
       ]
     }

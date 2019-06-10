@@ -30,3 +30,14 @@
     }
   }
 }
+
+.breadcrumb {
+  li {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  li, a {
+    color: $gray-600;
+  }
+}

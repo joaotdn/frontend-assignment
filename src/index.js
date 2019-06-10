@@ -3,6 +3,7 @@ import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import App from './App';
 import router from 'Router';
+import store from 'Store';
 
 Vue.use(BootstrapVue);
 
@@ -10,5 +11,6 @@ Vue.use(BootstrapVue);
 new Vue({
   el: '#app',
   router,
+  store,
   render: createElement => createElement(App)
 });

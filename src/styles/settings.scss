@@ -1,13 +1,14 @@
 // colors
 $primary: rgb(57, 71, 131);
 $info: $primary;
-$light: #5D699A;
+$light: #5d699a;
 $dark: rgb(31, 43, 90);
 $white: #ffffff;
 $body-bg: $white;
 
 // borders
 $global-border: 1px solid rgba($primary, .2);
+$global-radius: 4px;
 
 // side nav
 $sidenav-item-active-bg: #FAFBFC;

@@ -1,0 +1,25 @@
+a {
+  -webkit-transition: all .3s linear;
+  -moz-transition: all .3s linear;
+  -ms-transition: all .3s linear;
+  -o-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+label {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700;
+  @extend .text-black-50;
+}
+
+.app-content {
+  border-radius: $global-radius;
+  border: $global-border;
+
+  input, textarea {
+    &::placeholder {
+      color: lighten($light, 40%);
+    }
+  }
+}

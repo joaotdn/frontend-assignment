@@ -1,6 +1,6 @@
 .nav-company {
   border: $global-border;
-  border-radius: 4px;
+  border-radius: $global-radius;
   background-color: $white;
 
   a {
@@ -11,10 +11,11 @@
     transition: none;
     display: block;
     width: 100%;
-    padding: 1em 20px 1em 18px;
+    padding: 1.4em 20px 1.4em 18px;
     text-transform: uppercase;
     font-weight: 500;
     border-left: 2px solid transparent;
+    font-size: 14px;
 
     &.router-link-exact-active {
       border-left-color: $primary;

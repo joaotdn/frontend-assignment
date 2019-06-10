@@ -1,0 +1,32 @@
+.nav-company {
+  border: $global-border;
+  border-radius: 4px;
+  background-color: $white;
+
+  a {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+    display: block;
+    width: 100%;
+    padding: 1em 20px 1em 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-left: 2px solid transparent;
+
+    &.router-link-exact-active {
+      border-left-color: $primary;
+      background-color: $sidenav-item-active-bg;
+    }
+
+    &:not(:first-child) {
+      border-top: $global-border;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

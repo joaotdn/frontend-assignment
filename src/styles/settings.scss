@@ -1,5 +1,13 @@
-// Bootstrap Overrides
+// colors
 $primary: rgb(57, 71, 131);
 $info: $primary;
+$light: #5D699A;
 $dark: rgb(31, 43, 90);
-$body-bg: rgb(231, 233, 243);
+$white: #ffffff;
+$body-bg: $white;
+
+// borders
+$global-border: 1px solid rgba($primary, .2);
+
+// side nav
+$sidenav-item-active-bg: #FAFBFC;

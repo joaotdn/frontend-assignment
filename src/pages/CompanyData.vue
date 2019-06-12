@@ -10,7 +10,7 @@
       <b-col cols="12">
         <b-form
           class="mt-3"
-          novalidate
+          @submit.prevent="submitForm"
         >
           <b-form-group
             id="input-group-1"
@@ -20,11 +20,16 @@
             <b-form-input
               id="input-name"
               v-model="form.name"
+              v-validate="'required'"
               class="w-75"
               type="text"
-              required
               placeholder="e.g. Your Company Name"
+              name="name"
             />
+            <span
+              v-show="errors.has('name')"
+              class="text-danger text-uppercase"
+            ><small>{{ errors.first('name') }}</small></span>
           </b-form-group>
 
           <b-form-group
@@ -42,7 +47,6 @@
               }"
               class="w-75"
               type="text"
-              required
               placeholder="e.g. $150,000"
             />
           </b-form-group>
@@ -62,7 +66,6 @@
                   distractionFree: false
                 }"
                 type="text"
-                required
                 placeholder="Maximum spend (e.g. $330,000)"
               />
 
@@ -75,7 +78,6 @@
                   distractionFree: false
                 }"
                 type="text"
-                required
                 placeholder="Minimum spend (e.g. $150,000)"
               />
             </b-input-group>
@@ -89,7 +91,6 @@
             <b-form-textarea
               id="input-notes"
               v-model="form.notes"
-              required
               placeholder="e.g. Good Tech Company"
               rows="6"
               max-rows="6"
@@ -122,6 +123,7 @@
 
 <script>
 import { CurrencyDirective } from 'vue-currency-input';
+
 export default {
   directives: {
     currency: CurrencyDirective
@@ -137,6 +139,18 @@ export default {
         notes: ''
       }
     };
+  },
+
+  methods: {
+    submitForm () {
+      this.$validator.validateAll().then((result) => {
+        if (result) {
+          alert('Form Submitted!');
+          return;
+        }
+        alert('Correct them errors!');
+      });
+    }
   }
 };
 </script>

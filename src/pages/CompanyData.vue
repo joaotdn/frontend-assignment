@@ -64,6 +64,20 @@
           >
             <b-input-group class="w-75">
               <b-form-input
+                id="input-spend-ability-min"
+                v-model="form.spendAbilityMin"
+                v-currency="{
+                  currency: 'USD',
+                  locale: 'en',
+                  distractionFree: false
+                }"
+                v-validate="'required'"
+                type="text"
+                placeholder="Minimum spend (e.g. $150,000)"
+                name="spendAbilityMin"
+              />
+
+              <b-form-input
                 id="input-spend-ability-max"
                 v-model="form.spendAbilityMax"
                 v-currency="{
@@ -75,19 +89,11 @@
                 placeholder="Maximum spend (e.g. $330,000)"
                 name="spendAbilityMax"
               />
-
-              <b-form-input
-                id="input-spend-ability-min"
-                v-model="form.spendAbilityMin"
-                v-currency="{
-                  currency: 'USD',
-                  locale: 'en',
-                  distractionFree: false
-                }"
-                type="text"
-                placeholder="Minimum spend (e.g. $150,000)"
-                name="spendAbilityMin"
-              />
+              <span
+                v-show="errors.has('spendAbilityMin')"
+                class="text-danger text-uppercase"
+                style="display: block;"
+              ><small>{{ errors.first('spendAbilityMin') }}</small></span>
             </b-input-group>
           </b-form-group>
 
@@ -156,6 +162,7 @@ export default {
           alert('Form Submitted!');
           return;
         }
+
         alert('Correct them errors!');
       });
     }

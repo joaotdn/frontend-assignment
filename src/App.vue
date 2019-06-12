@@ -56,10 +56,7 @@ export default {
   },
 
   computed: {
-    ...mapGetters(['breadcrumbItems']),
-    breadcrumb () {
-      return this.$store.dispatch(UPDATE_BREADCRUMB, this.$route.meta);
-    }
+    ...mapGetters(['breadcrumbItems'])
   },
 
   watch: {
@@ -70,6 +67,12 @@ export default {
 
   mounted () {
     this.breadcrumb();
+  },
+
+  methods: {
+    breadcrumb () {
+      return this.$store.dispatch(UPDATE_BREADCRUMB, this.$route.meta);
+    }
   }
 };
 </script>

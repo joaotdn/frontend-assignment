@@ -1,1 +1,1 @@
-export const INSERT_ITEM = 'insertItem';
+export const SET_BREADCRUMB = 'setBreadcrumb';

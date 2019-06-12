@@ -1,5 +1,5 @@
 import { UPDATE_BREADCRUMB } from 'Store/actions.type';
-import { INSERT_ITEM } from 'Store/mutations.type';
+import { SET_BREADCRUMB } from 'Store/mutations.type';
 
 const state = {
   items: []
@@ -13,13 +13,13 @@ const getters = {
 
 const actions = {
   [UPDATE_BREADCRUMB] ({ commit }, item) {
-    commit(INSERT_ITEM, item);
+    commit(SET_BREADCRUMB, item);
   }
 };
 
-// TODO: home must come dynamically
 const mutations = {
-  [INSERT_ITEM] (state, item) {
+  // TODO
+  [SET_BREADCRUMB] (state, item) {
     state.items = [
       {
         text: 'Home',

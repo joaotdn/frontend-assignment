@@ -45,10 +45,16 @@
                 locale: 'en',
                 distractionFree: false
               }"
+              v-validate="'required'"
               class="w-75"
               type="text"
               placeholder="e.g. $150,000"
+              name="spend"
             />
+            <span
+              v-show="errors.has('spend')"
+              class="text-danger text-uppercase"
+            ><small>{{ errors.first('spend') }}</small></span>
           </b-form-group>
 
           <b-form-group
@@ -67,6 +73,7 @@
                 }"
                 type="text"
                 placeholder="Maximum spend (e.g. $330,000)"
+                name="spendAbilityMax"
               />
 
               <b-form-input
@@ -79,6 +86,7 @@
                 }"
                 type="text"
                 placeholder="Minimum spend (e.g. $150,000)"
+                name="spendAbilityMin"
               />
             </b-input-group>
           </b-form-group>

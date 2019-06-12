@@ -108,6 +108,7 @@
               placeholder="e.g. Good Tech Company"
               rows="6"
               max-rows="6"
+              @click="modalShow = !modalShow"
             />
           </b-form-group>
 
@@ -130,6 +131,14 @@
             </b-col>
           </b-row>
         </b-form>
+        <b-modal v-model="modalShow">
+          <b-form-textarea
+            v-model="form.notes"
+            placeholder="Write here your additional notes"
+            rows="6"
+            max-rows="6"
+          />
+        </b-modal>
       </b-col>
     </b-row>
   </div>
@@ -151,11 +160,13 @@ export default {
         spendAbilityMin: null,
         spendAbilityMax: null,
         notes: ''
-      }
+      },
+      modalShow: false
     };
   },
 
   methods: {
+    // TODO Use Vuex
     submitForm () {
       this.$validator.validateAll().then((result) => {
         if (result) {
